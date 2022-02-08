@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store } from "./store/store";
+import { store } from "../store/store";
 
-import Navbar from "./components/Navbar/Navbar";
-import { HomePage } from "./views/HomePage";
-import { ProfilePage } from "./views/ProfilePage";
+import Navbar from "../components/Navbar/Navbar";
+import { HomePage } from "./HomePage";
+import { ProfilePage } from "./ProfilePage";
 // import { NotFoundPage } from "./views/NotFoundPage";
 
 export default function App() {
