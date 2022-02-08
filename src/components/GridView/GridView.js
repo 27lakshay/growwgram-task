@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import "./gridView.css";
 
 export default function GridView(props) {
-    const { data, getMoreData, hasMore } = props;
+    const { data, getMoreData, hasMore, viewPostInListView } = props;
     useEffect(() => {}, []);
 
     return (
@@ -17,7 +17,7 @@ export default function GridView(props) {
             className={"gv19Wrapper gv19gridView"}
         >
             {data.map((item) => (
-                <div id={item.id} className={`gv19postWrapper`}>
+                <div id={item.id} className={`gv19postWrapper`} onClick={() => viewPostInListView(item.id)}>
                     <img className="gv19Post" src={item.urls.small} />
                 </div>
             ))}

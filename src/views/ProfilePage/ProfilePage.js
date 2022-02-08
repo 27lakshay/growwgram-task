@@ -11,7 +11,7 @@ import GridView from "../../components/GridView/GridView";
 export default function ProfilePage() {
     const [pageOffset, setPageOffset] = useState(1);
     const [selectedTab, setSelectedTab] = useState(0);
-    const [postListView, setPostListView] = useState("");
+    const [postListView, setPostListView] = useState(null);
 
     const params = useParams();
     const dispatch = useDispatch();
@@ -52,7 +52,7 @@ export default function ProfilePage() {
                     </button>
                 </div>
                 {selectedTab ? (
-                    <Feed data={user.photos} getMoreData={hydrateFeed} />
+                    <Feed data={user.photos} getMoreData={hydrateFeed} scrollToPost={postListView} />
                 ) : (
                     <GridView
                         data={user.photos}

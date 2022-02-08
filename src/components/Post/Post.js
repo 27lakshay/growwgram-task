@@ -3,8 +3,18 @@ import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post(props) {
-    const { id, user, urls, description } = props.data;
-    const [postLiked, setPostLiked] = useState(false);
+    const { id, user, urls, description, likes } = props.data;
+    const [postLikeStatus, setPostLikeStatus] = useState({ count: likes, liked: false });
+
+    function handleLike() {
+        if (postLikeStatus.liked) {
+            setPostLikeStatus((prev) => ({ count: prev.count - 1, liked: false }));
+            return;
+        }
+        setPostLikeStatus((prev) => ({ count: prev.count + 1, liked: true }));
+        return;
+    }
+
     return (
         <div id={id} className="p19Wrapper">
             <div className="p19Head">
@@ -16,11 +26,9 @@ export default function Post(props) {
             </div>
             <div className="p19Footer">
                 <div className="p19Options">
-                    <button
-                        className={`p19Option ${postLiked ? "liked" : ""}`}
-                        onClick={() => setPostLiked((prev) => !prev)}
-                    >
-                        {postLiked ? <i className="fas fa-heart" /> : <i className="far fa-heart" />}
+                    <button className={`p19Option ${postLikeStatus.liked ? "liked" : ""}`} onClick={() => handleLike()}>
+                        {postLikeStatus.liked ? <i className="fas fa-heart" /> : <i className="far fa-heart" />}
+                        <span>{postLikeStatus.count}</span>
                     </button>
                     <button className="p19Option">
                         <i className="fas fa-share" />

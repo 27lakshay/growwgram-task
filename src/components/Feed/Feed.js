@@ -5,11 +5,17 @@ import "./feed.css";
 import Post from "../Post/Post";
 
 export default function Feed(props) {
-    const { data, getMoreData, hasMore } = props;
+    const { data, getMoreData, hasMore, scrollToPost } = props;
+
     useEffect(() => {
-        // hasMore;
-        // debugger;
-    });
+        if (scrollToPost) {
+            let el = document.getElementById(scrollToPost)
+            el.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }, []);
 
     return (
         <InfiniteScroll

@@ -39,7 +39,7 @@
 }
 
 .p19Footer {
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,7 +53,7 @@
 
 .p19Options {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
 }
@@ -63,6 +63,14 @@
     border: none;
     background-color: transparent;
     font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p19Option span {
+    font-size: 14px;
 }
 
 .p19Option i {
@@ -78,5 +86,9 @@
     .p19Wrapper {
         width: 100%;
         border-radius: 0;
+    }
+    .p19Head,
+    .p19Footer {
+        padding: 0.5rem;
     }
 }
