@@ -1,0 +1,7 @@
+.f19Wrapper {
+    width: 100%;
+    transition: all 0.3s ease-in;
+}
+.f19Wrapper:first-child {
+    margin-top: 2rem;
+}

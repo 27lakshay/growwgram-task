@@ -1,0 +1,3 @@
+export const GET_USER_DETAILS  = "GET_USER_DETAILS";
+export const GET_USER_PHOTOS = "GET_USER_PHOTOS";
+export const RESET_USER = "RESET_USER";

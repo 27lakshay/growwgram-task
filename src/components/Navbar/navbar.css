@@ -1,0 +1,59 @@
+.nb19Wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--gg-primary-lightest);
+    scroll-snap-align: start;
+}
+.nb19Brand button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--gg-grey-light);
+    transition: color 0.3s ease;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nb19Brand:hover button {
+    color: var(--gg-off-white);
+}
+
+.nb19Options {
+    display: flex;
+    gap: 2rem;
+}
+
+.nb19Option {
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nb19Option i {
+    color: var(--gg-grey-light);
+    transition: color 0.3s ease;
+}
+.nb19Option:hover i {
+    color: var(--gg-off-white);
+}
+
+@media (max-width: 640px) {
+    .nb19Wrapper {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nb19Brand button {
+        font-size: 1.5rem;
+    }
+    .nb19Option:nth-child(1),
+    .nb19Option:nth-child(2) {
+        display: none;
+    }
+    
+}
