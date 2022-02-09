@@ -31,16 +31,25 @@ export async function fetchRandomPhotos(offset = 1) {
 }
 export async function fetchUserDetails(username) {
     try {
-        let localCache = getLocalData(username);
+        let localCache = getLocalData("cachedUserProfiles");
+        // debugger;
         if (localCache) {
-            return localCache.data;
+            let user = localCache.data.find((userData) => userData.username === username);
+            if (user) return user;
         }
         const response = await instance.get(`/users/${username}`);
+        // debugger;
+        let cachedUsers = (localCache && localCache.data) || [];
+
+        if (cachedUsers.length >= 5) {
+            cachedUsers.pop();
+        }
+        cachedUsers.unshift({ ...response.data, timestamp: Date.now() });
         let dataToStore = {
-            data: response.data,
+            data: cachedUsers,
             timestamp: Date.now(),
         };
-        setLocalData(username, dataToStore);
+        setLocalData("cachedUserProfiles", dataToStore);
         return response.data;
     } catch (e) {
         console.log(e);

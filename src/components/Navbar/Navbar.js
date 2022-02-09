@@ -1,13 +1,18 @@
 import "./navbar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { removeCache } from "../../utils/cache/cache";
 
 export default function Navbar() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     function resetCache() {
-        removeCache();
+        if (location.pathname === "/") {
+            removeCache("feed_posts");
+            window.location.reload();
+            return;
+        }
         navigate("/");
     }
 
@@ -18,13 +23,13 @@ export default function Navbar() {
             </span>
             <span className="nb19Options">
                 <button className="nb19Option">
-                    <i class="fas fa-inbox" />
+                    <i className="fas fa-inbox" />
                 </button>
                 <button className="nb19Option">
-                    <i class="fas fa-bell" />
+                    <i className="fas fa-bell" />
                 </button>
                 <button className="nb19Option" onClick={() => navigate("/windows")}>
-                    <i class="fas fa-user-circle" />
+                    <i className="fas fa-user-circle" />
                 </button>
             </span>
         </nav>

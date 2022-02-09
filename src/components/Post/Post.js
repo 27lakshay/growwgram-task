@@ -19,7 +19,7 @@ export default function Post(props) {
         <div id={id} className="p19Wrapper">
             <div className="p19Head">
                 <Link to={`/${user.username}`}>{user.username}</Link>
-                <i class="fas fa-ellipsis-h" />
+                <i className="fas fa-ellipsis-h" />
             </div>
             <div className="p19Body">
                 <img className="p19Picture" src={urls.small} />
@@ -28,7 +28,7 @@ export default function Post(props) {
                 <div className="p19Options">
                     <button className={`p19Option ${postLikeStatus.liked ? "liked" : ""}`} onClick={() => handleLike()}>
                         {postLikeStatus.liked ? <i className="fas fa-heart" /> : <i className="far fa-heart" />}
-                        <span>{postLikeStatus.count}</span>
+                        <span>{postLikeStatus.count} likes</span>
                     </button>
                     <button className="p19Option">
                         <i className="fas fa-share" />

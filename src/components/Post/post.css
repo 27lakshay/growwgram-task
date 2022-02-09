@@ -1,5 +1,5 @@
 .p19Wrapper {
-    width: 500px;
+    width: 600px;
     height: 100%;
     background-color: var(--gg-primary-light);
     margin-bottom: 2rem;
@@ -53,9 +53,13 @@
 
 .p19Options {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    /* justify-content: flex-start; */
     gap: 1rem;
+    width: 100%;
+}
+.p19Options .p19Option:first-child {
+    margin-right: auto;
 }
 .p19Option {
     cursor: pointer;
@@ -64,13 +68,13 @@
     background-color: transparent;
     font-size: 24px;
     display: flex;
-    flex-direction: column;
+    gap: 4px;
     justify-content: center;
     align-items: center;
 }
 
 .p19Option span {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .p19Option i {

@@ -7,6 +7,7 @@ import { getUserDetails, getUserPhotos } from "../../store/user/actions";
 import Feed from "../../components/Feed/Feed";
 import UserDetails from "../../components/UserDetails/UserDetails";
 import GridView from "../../components/GridView/GridView";
+import Loader from "../../components/Loader/Loader";
 
 export default function ProfilePage() {
     const [pageOffset, setPageOffset] = useState(1);
@@ -41,7 +42,7 @@ export default function ProfilePage() {
 
     return (
         <main className="pp19Wrapper">
-            <UserDetails data={user.details} />
+            {user && user.details ? <UserDetails data={user.details} /> : <Loader />}
             <section className="pp19photosWrapper">
                 <div className="tb19tabsButton">
                     <button className={`tb19tabBtn ${selectedTab ? "" : "active-tab"}`} onClick={() => changeTab(0)}>

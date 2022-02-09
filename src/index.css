@@ -20,6 +20,7 @@ body {
     box-sizing: border-box;
     color: var(--gg-off-white);
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
     /* outline: 1px solid red; */
 }
 
