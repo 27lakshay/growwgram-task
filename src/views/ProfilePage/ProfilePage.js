@@ -42,7 +42,7 @@ export default function ProfilePage() {
 
     return (
         <main className="pp19Wrapper">
-            {user && user.details ? <UserDetails data={user.details} /> : <Loader />}
+            {user && user.username ? <UserDetails data={user.details} /> : <Loader />}
             <section className="pp19photosWrapper">
                 <div className="tb19tabsButton">
                     <button className={`tb19tabBtn ${selectedTab ? "" : "active-tab"}`} onClick={() => changeTab(0)}>
