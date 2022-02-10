@@ -34,7 +34,7 @@
     background-color: transparent;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--gg-grey-light);
+    color: var(--gg-off-white);
     transition: color 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -47,6 +47,7 @@
 }
 
 .tb19tabBtn.active-tab {
+    background-color: var(--gg-primary-lightest);
     color: var(--gg-off-white);
 }
 
@@ -54,7 +55,7 @@
     content: "";
     height: 10px;
     width: 10px;
-    background-color: var(--gg-off-white);
+    background-color: var(--gg-primary-hover);
     border-radius: 50%;
     position: absolute;
     bottom: -14px;
