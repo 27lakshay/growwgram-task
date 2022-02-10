@@ -18,7 +18,7 @@
 }
 
 .nb19Brand:hover button {
-    color: var(--gg-off-white);
+    color: var(--gg-primary-hover);
 }
 
 .nb19Options {
@@ -39,7 +39,7 @@
     transition: color 0.3s ease;
 }
 .nb19Option:hover i {
-    color: var(--gg-off-white);
+    color: var(--gg-primary-hover);
 }
 
 @media (max-width: 640px) {
@@ -56,3 +56,4 @@
     }
     
 }
+

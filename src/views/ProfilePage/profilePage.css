@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: #222733;
+    background-color: var(--gg-primary);
 }
 
 .pp19photosWrapper {
@@ -38,6 +38,12 @@
     transition: color 0.3s ease;
     cursor: pointer;
     position: relative;
+    padding: 0.5rem;
+    border-radius: var(--gg-border-radius);
+}
+
+.tb19tabBtn:hover {
+    background-color: var(--gg-primary-lightest);
 }
 
 .tb19tabBtn.active-tab {

@@ -13,6 +13,7 @@ body {
     --gg-grey-dark: #3a404e;
     --gg-grey-darkest: #404042;
     --gg-border-radius: 8px;
+    --gg-primary-hover: #a9a9a9;
 }
 * {
     margin: 0;
@@ -21,6 +22,7 @@ body {
     color: var(--gg-off-white);
     font-family: "Poppins", sans-serif;
     text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
     /* outline: 1px solid red; */
 }
 

@@ -3,6 +3,6 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #222733;
+    background-color: var(--gg-primary);
     gap: 2rem;
 }

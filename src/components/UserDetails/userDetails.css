@@ -1,6 +1,6 @@
 .pp19userDetailsWrapper {
     display: grid;
-    background-color: #2d3242;
+    background-color: var(--gg-primary-lightest);
     margin-top: 2rem;
     border-radius: var(--gg-border-radius);
     grid-template-columns: 20% 80%;
