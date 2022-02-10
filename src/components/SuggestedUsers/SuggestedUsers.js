@@ -25,7 +25,7 @@ export default function SuggestedUsers(props) {
                     ))}
                 </ul>
             ) : (
-                Array.from(Array(3)).map((_, i) => <Loader key={i} />)
+                Array.from(Array(3)).map((_, i) => <Loader key={i} type={"suggestedUser"} />)
             )}
         </section>
     );

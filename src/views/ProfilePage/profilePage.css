@@ -9,13 +9,24 @@
 .pp19photosWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.tb19tabsButton.sticky {
+    z-index: 20;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--gg-primary-light);
 }
 .tb19tabsButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     gap: 3rem;
+    transition: all 0.3s ease;
 }
 .tb19tabBtn {
     outline: none;

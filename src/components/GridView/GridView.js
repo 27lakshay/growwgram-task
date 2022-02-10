@@ -7,8 +7,7 @@ export default function GridView(props) {
     const { data, getMoreData, hasMore, viewPostInListView } = props;
 
     return (
-        <>
-            <div className="gv19Wrapper gv19gridView">
+            <div className="">
                 {data.length > 0 ? (
                     <InfiniteScroll
                         dataLength={data.length}
@@ -17,6 +16,7 @@ export default function GridView(props) {
                         loader={<h4>Loading...</h4>}
                         scrollThreshold={1}
                         className={"gv19gridView"}
+                        style={{ margin: 0 }}
                     >
                         {data.map((item) => (
                             <div
@@ -29,9 +29,12 @@ export default function GridView(props) {
                         ))}
                     </InfiniteScroll>
                 ) : (
-                    Array.from(Array(10)).map((_, i) => <Loader key={i} />)
+                    <div className="gv19Wrapper gv19gridView">
+                        {Array.from(Array(10)).map((_, i) => (
+                            <Loader key={i} type={"image"} />
+                        ))}
+                    </div>
                 )}
             </div>
-        </>
     );
 }

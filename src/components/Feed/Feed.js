@@ -10,7 +10,6 @@ export default function Feed(props) {
 
     useEffect(() => {
         if (scrollToPost) {
-            debugger;
             let el = document.getElementById(scrollToPost);
             el.scrollIntoView({
                 behavior: "smooth",
@@ -35,7 +34,7 @@ export default function Feed(props) {
                     ))}
                 </InfiniteScroll>
             ) : (
-                Array.from(Array(5)).map((_, i) => <Loader key={i} />)
+                Array.from(Array(5)).map((_, i) => <Loader key={i} type={"post"} />)
             )}
         </div>
     );
