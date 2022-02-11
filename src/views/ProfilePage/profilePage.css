@@ -34,7 +34,7 @@
     background-color: transparent;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--gg-off-white);
+    color: var(--gg-text);
     transition: color 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -43,24 +43,24 @@
 }
 
 .tb19tabBtn:hover {
-    background-color: var(--gg-primary-lightest);
+    background-color: var(--gg-primary-light);
 }
 
 .tb19tabBtn.active-tab {
-    background-color: var(--gg-primary-lightest);
-    color: var(--gg-off-white);
+    background-color: var(--gg-primary-light);
+    color: var(--gg-text);
 }
 
 .tb19tabBtn.active-tab::after {
     content: "";
     height: 10px;
     width: 10px;
-    background-color: var(--gg-primary-hover);
+    background-color: var(--gg-primary-lightest);
     border-radius: 50%;
     position: absolute;
     bottom: -14px;
-    transform: translateX(-50%);
     left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 640px) {

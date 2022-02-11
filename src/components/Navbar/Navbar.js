@@ -20,21 +20,22 @@ export default function Navbar() {
 
     useEffect(() => {
         if (isDark) {
-            document.documentElement.style.setProperty("--gg-primary-lightest", "#3b4255");
-            document.documentElement.style.setProperty("--gg-primary", "#222733");
-            document.documentElement.style.setProperty("--gg-primary-light", "#2d3242");
-            document.documentElement.style.setProperty("--gg-off-white", "#F7EDE2");
-            document.documentElement.style.setProperty("--gg-grey-light", "#a9a9a9");
-            document.documentElement.style.setProperty("--gg-primary-hover", "#dbdbdb");
+            document.documentElement.style.setProperty("--gg-primary", "#0B132B");
+            document.documentElement.style.setProperty("--gg-primary-light", "#1C2541");
+            document.documentElement.style.setProperty("--gg-primary-lightest", "#3A506B");
+            document.documentElement.style.setProperty("--gg-button-hover", "#34312D");
+            document.documentElement.style.setProperty("--gg-text", "#E8EDDF");
+            document.documentElement.style.setProperty("--gg-text-hover", "#fff");
             return;
         }
-        document.documentElement.style.setProperty("--gg-primary-lightest", "#F28482");
+        document.documentElement.style.setProperty("--gg-primary-lightest", "#f1a9a8");
         document.documentElement.style.setProperty("--gg-primary", "#F5CAC3");
         document.documentElement.style.setProperty("--gg-primary-light", "#F28482");
         document.documentElement.style.setProperty("--gg-off-white", "#dbdbdb");
         document.documentElement.style.setProperty("--gg-grey-light", "#dbdbdb");
-        document.documentElement.style.setProperty("--gg-primary-hover", "#F6DCD3");
+        document.documentElement.style.setProperty("--gg-button-hover", "#F6DCD3");
     }, [isDark]);
+
 
     return (
         <nav className="nb19Wrapper">
@@ -52,9 +53,47 @@ export default function Navbar() {
                     <i className="fas fa-user-circle" />
                 </button>
                 <button className="nb19Option" onClick={() => setIsDark((prev) => !prev)}>
-                    {isDark ? <i className="fas fa-moon"></i> : <i className="fas fa-sun"></i> }
+                    {isDark ? <i className="fas fa-moon"></i> : <i className="fas fa-sun"></i>}
                 </button>
+                {/* <button onClick={() => setTheme("brown")}>brown</button>
+                <button onClick={() => setTheme("blue")}>blue</button>
+                <button onClick={() => setTheme("yellow")}>yellow</button>
+                <button onClick={() => setTheme("green")}>green</button> */}
             </span>
         </nav>
     );
 }
+
+
+// if (theme === "brown") {
+//     document.documentElement.style.setProperty("--gg-primary", "#14110F");
+//     document.documentElement.style.setProperty("--gg-primary-light", "#34312D");
+//     document.documentElement.style.setProperty("--gg-primary-lightest", "#7E7F83");
+//     document.documentElement.style.setProperty("--gg-button-hover", "#34312D");
+//     document.documentElement.style.setProperty("--gg-text", "#D9C5B2");
+//     document.documentElement.style.setProperty("--gg-text-hover", "#F3F3F4");
+// }
+// if (theme === "blue") {
+//     document.documentElement.style.setProperty("--gg-primary", "#0B132B");
+//     document.documentElement.style.setProperty("--gg-primary-light", "#1C2541");
+//     document.documentElement.style.setProperty("--gg-primary-lightest", "#3A506B");
+//     document.documentElement.style.setProperty("--gg-button-hover", "#34312D");
+//     document.documentElement.style.setProperty("--gg-text", "#E8EDDF");
+//     document.documentElement.style.setProperty("--gg-text-hover", "#fff");
+// }
+// if (theme === "yellow") {
+//     document.documentElement.style.setProperty("--gg-primary", "#EEA243");
+//     document.documentElement.style.setProperty("--gg-primary-light", "#F3E37C");
+//     document.documentElement.style.setProperty("--gg-primary-lightest", "#F3D34Ay");
+//     document.documentElement.style.setProperty("--gg-button-hover", "#F3D34A");
+//     document.documentElement.style.setProperty("--gg-text", "#242423");
+//     document.documentElement.style.setProperty("--gg-text-hover", "#242423");
+// }
+// if (theme === "green") {
+//     document.documentElement.style.setProperty("--gg-primary", "#111D13");
+//     document.documentElement.style.setProperty("--gg-primary-light", "#415D43");
+//     document.documentElement.style.setProperty("--gg-primary-lightest", "#709775");
+//     document.documentElement.style.setProperty("--gg-button-hover", "#415D43");
+//     document.documentElement.style.setProperty("--gg-text", "#E8EDDF");
+//     document.documentElement.style.setProperty("--gg-text-hover", "#fff");
+// }

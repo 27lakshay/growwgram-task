@@ -7,7 +7,7 @@ export default function GridView(props) {
     const { data, getMoreData, hasMore, viewPostInListView } = props;
 
     return (
-            <div className="">
+            <div>
                 {data.length > 0 ? (
                     <InfiniteScroll
                         dataLength={data.length}

@@ -4,13 +4,13 @@
     align-items: center;
     width: 100%;
     height: 60px;
-    background-color: var(--gg-primary-lightest);
+    background-color: var(--gg-primary-light);
 }
 .nb19Brand button {
     outline: none;
     border: none;
     background-color: transparent;
-    color: var(--gg-grey-light);
+    color: var(--gg-text);
     transition: color 0.3s ease;
     font-size: 2rem;
     font-weight: 600;
@@ -18,7 +18,7 @@
 }
 
 .nb19Brand:hover button {
-    color: var(--gg-primary-hover);
+    color: var(--gg-text-hover);
 }
 
 .nb19Options {
@@ -32,14 +32,6 @@
     font-size: 1.5rem;
     background-color: transparent;
     cursor: pointer;
-}
-
-.nb19Option i {
-    color: var(--gg-grey-light);
-    transition: color 0.3s ease;
-}
-.nb19Option:hover i {
-    color: var(--gg-primary-hover);
 }
 
 @media (max-width: 640px) {

@@ -77,15 +77,6 @@
     font-size: 20px;
 }
 
-.p19Option i {
-    color: var(--gg-grey-light);
-    transition: color 0.3s ease;
-}
-
-.p19Option:hover i {
-    color: var(--gg-off-white);
-}
-
 @media (max-width: 640px) {
     .p19Wrapper {
         width: 100%;
